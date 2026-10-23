@@ -68,7 +68,6 @@ h1 { font-family: var(--script); font-weight: 400; font-size: clamp(40px, 9vw, 6
 .badge { position: absolute; top: 8px; left: 8px; background: var(--orange); color: #FFF; font-family: var(--display); font-weight: 700;
   font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 4px 8px; line-height: 1; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
 .size b { font-weight: 700; color: var(--orange); }
-.size.arrivo { border-style: dashed; }
 .empty { padding: 40px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 14px; grid-column: 1 / -1; }
 footer { margin-top: 34px; text-align: center; font-family: var(--serif); font-size: 11px; letter-spacing: .12em;
   text-transform: uppercase; color: var(--muted); }
@@ -108,7 +107,8 @@ function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt
 
 const COND = c => c === 'DS' ? 'DS' : c === 'PADS' ? 'PADS' : c === 'VNDS' ? 'VNDS' : (c || '');
 function card(p){
-  const sizes = p.taglie.map(t => `<span class="size${t.arrivo ? ' arrivo' : ''}">EU ${esc(t.eu)}${t.us ? ' <span>/ US ' + esc(t.us) + '</span>' : ''}${t.cond ? ' · <b>' + esc(COND(t.cond)) + '</b>' : ''}${t.arrivo ? ' <span>· in arrivo</span>' : ''}</span>`).join('');
+  const sizes = p.taglie.map(t => `<span class="size">EU ${esc(t.eu)}${t.us ? ' <span>/ US ' + esc(t.us) + '</span>' : ''}${t.cond ? ' · <b>' + esc(COND(t.cond)) + '</b>' : ''}</span>`).join('');
+  // badge only for a new model whose pairs are all still on the way
   const tutteInArrivo = p.taglie.length && p.taglie.every(t => t.arrivo);
   return `<article class="card">
     <div class="shot">
