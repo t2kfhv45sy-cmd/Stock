@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T12:15:00+02:00",
+ "aggiornato": "2026-10-24T00:40:00+02:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -25,6 +25,73 @@
      "eu": "42",
      "us": "8.5",
      "cond": "VNDS"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Shy Pink",
+   "slug": "jordan-1-low-travis-scott-shy-pink",
+   "taglie": [
+    {
+     "eu": "41",
+     "us": "8",
+     "cond": "DS"
+    },
+    {
+     "eu": "42",
+     "us": "8.5",
+     "cond": "DS"
+    },
+    {
+     "eu": "43",
+     "us": "9.5",
+     "cond": "DS"
+    },
+    {
+     "eu": "44",
+     "us": "10",
+     "cond": "DS"
+    },
+    {
+     "eu": "46",
+     "us": "12",
+     "cond": "DS"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Tropical Pink",
+   "slug": "jordan-1-low-travis-scott-tropical-pink",
+   "taglie": [
+    {
+     "eu": "42",
+     "us": "8.5",
+     "cond": "DS"
+    },
+    {
+     "eu": "44",
+     "us": "10",
+     "cond": "DS"
+    },
+    {
+     "eu": "44.5",
+     "us": "10.5",
+     "cond": "DS"
+    },
+    {
+     "eu": "45",
+     "us": "11",
+     "cond": "DS"
+    },
+    {
+     "eu": "45.5",
+     "us": "11.5",
+     "cond": "DS"
+    },
+    {
+     "eu": "46",
+     "us": "12",
+     "cond": "DS"
     }
    ]
   },
