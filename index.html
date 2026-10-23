@@ -92,14 +92,20 @@ footer { margin-top: 34px; text-align: center; font-family: var(--serif); font-s
 <script>
 const SNEAKER = '<svg viewBox="0 0 120 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 44 L8 22 Q10 14 20 16 L40 22 Q52 26 60 18 L70 10 Q76 6 80 12 L86 24 Q92 32 106 36 Q116 39 114 46 L112 48 L8 48 Z"/><path d="M6 48 L114 48"/><path d="M48 24 L54 34 M58 20 L64 31 M68 14 L73 27"/></svg>';
 
+// own photo first (img/<slug>.webp), then the official StockX photo, then a placeholder
+function fotoFallback(img){
+  const f = img.dataset.foto;
+  if (f) { img.removeAttribute('data-foto'); img.src = f; return; }
+  img.replaceWith(Object.assign(document.createElement('div'), { className: 'ph', innerHTML: SNEAKER + 'Foto in arrivo' }));
+}
+
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
 function card(p){
   const sizes = p.taglie.map(t => `<span class="size">EU ${esc(t.eu)}${t.us ? ' <span>/ US ' + esc(t.us) + '</span>' : ''}</span>`).join('');
   return `<article class="card">
     <div class="shot">
-      <img src="img/${esc(p.slug)}.webp" alt="${esc(p.nome)}" loading="lazy"
-        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:SNEAKER+'Foto in arrivo'}))">
+      <img src="img/${esc(p.slug)}.webp" alt="${esc(p.nome)}" loading="lazy" referrerpolicy="no-referrer"${p.foto ? ` data-foto="${esc(p.foto)}"` : ''} onerror="fotoFallback(this)">
     </div>
     <div class="info">
       <h2 class="name">${esc(p.nome)}</h2>
