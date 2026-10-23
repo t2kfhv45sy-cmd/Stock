@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-21T23:50:00+02:00",
+ "aggiornato": "2026-10-23T12:15:00+02:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -7,7 +7,8 @@
    "taglie": [
     {
      "eu": "42.5",
-     "us": "9"
+     "us": "9",
+     "cond": "9.5/10"
     }
    ]
   },
@@ -17,11 +18,13 @@
    "taglie": [
     {
      "eu": "41",
-     "us": "8"
+     "us": "8",
+     "cond": "VNDS"
     },
     {
      "eu": "42",
-     "us": "8.5"
+     "us": "8.5",
+     "cond": "VNDS"
     }
    ]
   },
@@ -31,7 +34,8 @@
    "taglie": [
     {
      "eu": "43",
-     "us": "9.5"
+     "us": "9.5",
+     "cond": "VNDS"
     }
    ]
   },
@@ -41,7 +45,8 @@
    "taglie": [
     {
      "eu": "43",
-     "us": "9.5"
+     "us": "9.5",
+     "cond": "DS"
     }
    ]
   },
@@ -51,7 +56,20 @@
    "taglie": [
     {
      "eu": "44",
-     "us": "10"
+     "us": "10",
+     "cond": "DS"
+    }
+   ]
+  },
+  {
+   "nome": "Nike Air Max 1 Patta Waves Aqua",
+   "slug": "nike-air-max-1-patta-waves-aqua",
+   "taglie": [
+    {
+     "eu": "42.5",
+     "us": "9",
+     "cond": "PADS",
+     "arrivo": true
     }
    ]
   }
