@@ -1,0 +1,59 @@
+{
+ "aggiornato": "2026-10-21T23:50:00+02:00",
+ "paia": [
+  {
+   "nome": "Jordan 1 High OG Union LA Black Toe",
+   "slug": "jordan-1-high-union-la-black-toe",
+   "taglie": [
+    {
+     "eu": "42.5",
+     "us": "9"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Medium Olive",
+   "slug": "jordan-1-low-travis-scott-medium-olive",
+   "taglie": [
+    {
+     "eu": "41",
+     "us": "8"
+    },
+    {
+     "eu": "42",
+     "us": "8.5"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 3 J Balvin Medellín",
+   "slug": "jordan-3-j-balvin-medellin",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "9.5"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 3 J Balvin Rio",
+   "slug": "jordan-3-j-balvin-rio",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "9.5"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 4 SB Pine Green",
+   "slug": "jordan-4-sb-pine-green",
+   "taglie": [
+    {
+     "eu": "44",
+     "us": "10"
+    }
+   ]
+  }
+ ]
+}
