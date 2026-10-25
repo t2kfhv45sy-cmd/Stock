@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-24T00:40:00+02:00",
+ "aggiornato": "2026-10-25T10:28:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -9,6 +9,27 @@
      "eu": "42.5",
      "us": "9",
      "cond": "9.5/10"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 1 High OG VAA Alaska",
+   "slug": "jordan-1-high-vaa-alaska",
+   "taglie": [
+    {
+     "eu": "42.5",
+     "us": "9",
+     "cond": "DS"
+    },
+    {
+     "eu": "44",
+     "us": "10",
+     "cond": "DS"
+    },
+    {
+     "eu": "45",
+     "us": "11",
+     "cond": "DS"
     }
    ]
   },
@@ -25,6 +46,17 @@
      "eu": "42",
      "us": "8.5",
      "cond": "VNDS"
+    }
+   ]
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Mocha",
+   "slug": "jordan-1-low-travis-scott-mocha",
+   "taglie": [
+    {
+     "eu": "42.5",
+     "us": "9",
+     "cond": "DS"
     }
    ]
   },
@@ -129,6 +161,17 @@
    ]
   },
   {
+   "nome": "Jordan 4 x Off-White Sail",
+   "slug": "jordan-4-x-off-white-sail",
+   "taglie": [
+    {
+     "eu": "42.5",
+     "us": "10.5W",
+     "cond": "DS"
+    }
+   ]
+  },
+  {
    "nome": "Nike Air Max 1 Patta Waves Aqua",
    "slug": "nike-air-max-1-patta-waves-aqua",
    "taglie": [
@@ -137,6 +180,17 @@
      "us": "9",
      "cond": "PADS",
      "arrivo": true
+    }
+   ]
+  },
+  {
+   "nome": "Nike Dunk SB Strangelove",
+   "slug": "nike-dunk-sb-strangelove",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "9.5",
+     "cond": "DS"
     }
    ]
   }
