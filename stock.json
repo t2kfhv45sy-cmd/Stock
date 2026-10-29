@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-25T10:28:00+01:00",
+ "aggiornato": "2026-10-29T06:59:38+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -10,7 +10,8 @@
      "us": "9",
      "cond": "9.5/10"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Union-Los-Angeles-Black-Toe-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 High OG VAA Alaska",
@@ -31,7 +32,8 @@
      "us": "11",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Off-White-Alaska-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Medium Olive",
@@ -41,13 +43,9 @@
      "eu": "41",
      "us": "8",
      "cond": "VNDS"
-    },
-    {
-     "eu": "42",
-     "us": "8.5",
-     "cond": "VNDS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Medium-Olive-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Mocha",
@@ -58,17 +56,13 @@
      "us": "9",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-Travis-Scott-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Shy Pink",
    "slug": "jordan-1-low-travis-scott-shy-pink",
    "taglie": [
-    {
-     "eu": "41",
-     "us": "8",
-     "cond": "DS"
-    },
     {
      "eu": "42",
      "us": "8.5",
@@ -89,7 +83,8 @@
      "us": "12",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Shy-Pink-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Tropical Pink",
@@ -125,7 +120,20 @@
      "us": "12",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Sail-Tropical-Pink-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Velvet Brown",
+   "slug": "jordan-1-low-og-travis-scott-velvet-brown",
+   "taglie": [
+    {
+     "eu": "41",
+     "us": "8",
+     "cond": "9.5/10"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Velvet-Brown-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 3 J Balvin Medellín",
@@ -136,18 +144,8 @@
      "us": "9.5",
      "cond": "VNDS"
     }
-   ]
-  },
-  {
-   "nome": "Jordan 3 J Balvin Rio",
-   "slug": "jordan-3-j-balvin-rio",
-   "taglie": [
-    {
-     "eu": "43",
-     "us": "9.5",
-     "cond": "DS"
-    }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-3-Retro-SP-J-Balvin-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 4 SB Pine Green",
@@ -158,7 +156,8 @@
      "us": "10",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Pine-Green-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 4 x Off-White Sail",
@@ -169,7 +168,8 @@
      "us": "10.5W",
      "cond": "DS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-4-Retro-Off-White-Sail-W-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Nike Air Max 1 Patta Waves Aqua",
@@ -178,10 +178,10 @@
     {
      "eu": "42.5",
      "us": "9",
-     "cond": "PADS",
-     "arrivo": true
+     "cond": "PADS"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Nike-Air-Max-1-Patta-Waves-Noise-Aqua-with-Bracelet-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Nike Dunk SB Strangelove",
@@ -191,6 +191,18 @@
      "eu": "43",
      "us": "9.5",
      "cond": "DS"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Nike-SB-Dunk-Low-StrangeLove-Skateboards-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Nike SB Dunk Low Supreme 94 Black",
+   "slug": "nike-sb-dunk-low-supreme-94-black",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "",
+     "cond": "9.5/10"
     }
    ]
   }
