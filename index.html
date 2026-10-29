@@ -105,6 +105,7 @@ function fotoFallback(img){
 
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
+let VER = ''; // changes with data.aggiornato, so replaced photos reload too
 const COND = c => c === 'DS' ? 'DS' : c === 'PADS' ? 'PADS' : c === 'VNDS' ? 'VNDS' : (c || '');
 function card(p){
   const sizes = p.taglie.map(t => `<span class="size">EU ${esc(t.eu)}${t.us ? ' <span>/ US ' + esc(t.us) + '</span>' : ''}${t.cond ? ' · <b>' + esc(COND(t.cond)) + '</b>' : ''}</span>`).join('');
@@ -112,7 +113,7 @@ function card(p){
   const tutteInArrivo = p.taglie.length && p.taglie.every(t => t.arrivo);
   return `<article class="card">
     <div class="shot">
-      <img src="img/${esc(p.slug)}.webp" alt="${esc(p.nome)}" loading="lazy" referrerpolicy="no-referrer"${p.foto ? ` data-foto="${esc(p.foto)}"` : ''} onerror="fotoFallback(this)">
+      <img src="img/${esc(p.slug)}.webp?v=${VER}" alt="${esc(p.nome)}" loading="lazy" referrerpolicy="no-referrer"${p.foto ? ` data-foto="${esc(p.foto)}"` : ''} onerror="fotoFallback(this)">
       ${tutteInArrivo ? '<span class="badge">In arrivo</span>' : ''}
     </div>
     <div class="info">
@@ -125,8 +126,10 @@ function card(p){
 async function load(){
   const grid = document.getElementById('grid');
   try {
-    const res = await fetch('stock.json', { cache: 'no-store' });
+    // ?t= bypasses GitHub Pages' CDN cache (~10 min), which no-store alone doesn't
+    const res = await fetch('stock.json?t=' + Date.now(), { cache: 'no-store' });
     const data = await res.json();
+    VER = encodeURIComponent(data.aggiornato || '');
     const list = (data.paia || []).filter(p => p.taglie && p.taglie.length);
     document.getElementById('count').textContent = list.length;
     document.getElementById('pairs').textContent = list.reduce((n, p) => n + p.taglie.length, 0);
