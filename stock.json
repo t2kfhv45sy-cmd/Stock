@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-29T06:59:38+01:00",
+ "aggiornato": "2026-10-29T22:30:54+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -124,18 +124,6 @@
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Sail-Tropical-Pink-Product.jpg?w=800&fm=jpg"
   },
   {
-   "nome": "Jordan 1 Low OG Travis Scott Velvet Brown",
-   "slug": "jordan-1-low-og-travis-scott-velvet-brown",
-   "taglie": [
-    {
-     "eu": "41",
-     "us": "8",
-     "cond": "9.5/10"
-    }
-   ],
-   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Velvet-Brown-Product.jpg?w=800&fm=jpg"
-  },
-  {
    "nome": "Jordan 3 J Balvin Medellín",
    "slug": "jordan-3-j-balvin-medellin",
    "taglie": [
@@ -204,7 +192,8 @@
      "us": "",
      "cond": "9.5/10"
     }
-   ]
+   ],
+   "foto": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Supreme-94-Black-Product.jpg?w=800&fm=jpg"
   }
  ]
 }
