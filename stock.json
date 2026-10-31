@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-29T22:30:54+01:00",
+ "aggiornato": "2026-10-31T14:45:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -42,7 +42,7 @@
     {
      "eu": "41",
      "us": "8",
-     "cond": "VNDS"
+     "cond": "9.5/10"
     }
    ],
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Medium-Olive-Product.jpg?w=800&fm=jpg"
@@ -172,6 +172,18 @@
    "foto": "https://images.stockx.com/images/Nike-Air-Max-1-Patta-Waves-Noise-Aqua-with-Bracelet-Product.jpg?w=800&fm=jpg"
   },
   {
+   "nome": "Nike Air Max 1/97 Sean Wotherspoon",
+   "slug": "nike-air-max-1-97-sean-wotherspoon",
+   "taglie": [
+    {
+     "eu": "44.5",
+     "us": "10.5",
+     "cond": "9.5/10"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Nike-Air-Max-1-97-Sean-Wotherspoon-Product.jpg?w=800&fm=jpg"
+  },
+  {
    "nome": "Nike Dunk SB Strangelove",
    "slug": "nike-dunk-sb-strangelove",
    "taglie": [
@@ -189,7 +201,7 @@
    "taglie": [
     {
      "eu": "43",
-     "us": "",
+     "us": "9.5",
      "cond": "9.5/10"
     }
    ],
