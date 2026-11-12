@@ -89,7 +89,7 @@ main{display:grid;gap:28px;padding-block:28px 40px}
 @media (max-width:760px){.iv-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 10px}}
 .tile{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-width:0;position:relative}
 .tile .ph{aspect-ratio:1/1;max-width:100%;padding:10%;position:relative;transition:background-size .3s cubic-bezier(.16,1,.3,1)}
-.tile:hover .ph{background-size:88%}
+.tile:hover .ph{background-size:108%}
 .tile .ph .pill{position:absolute;right:8px;top:8px}
 .tile .qv{position:absolute;right:8px;bottom:8px;opacity:0;transition:opacity .15s}
 .tile:hover .qv,.tile:focus-visible .qv{opacity:1}
@@ -214,6 +214,10 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 .dm-s{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14px;color:var(--mut)}.dm-s b{color:var(--ink)}
 .dm-f{display:flex;gap:8px}.dm-f .btn{flex:1}
 @media (max-width:760px){.dmc{place-items:end center;padding:0}.dm-box{border-radius:var(--r-card) var(--r-card) 0 0;padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}}
+.tl{display:inline-flex;align-items:center;gap:8px}
+.acts .hint{grid-column:1/-1}
+.panel p{text-wrap:pretty}
+.iv-nav:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -229,7 +233,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 <main class="gut"><div class="in-w" style="display:grid;gap:28px">
   <section id="stock" style="display:grid;gap:18px;scroll-margin-top:80px">
     <div class="page-h"><div><span class="lbl" id="upd">Stock</span></div>
-      <div class="tools"><div class="seg" role="group" aria-label="Condizione" id="cond"></div><div class="seg" role="group" aria-label="Ordina" id="ord"></div></div></div>
+      <div class="tools"><span class="tl"><span class="lbl">Condizione</span><div class="seg" role="group" aria-label="Condizione" id="cond"></div></span><span class="tl"><span class="lbl">Ordina</span><div class="seg" role="group" aria-label="Ordina" id="ord"></div></span></div></div>
     <nav class="iv-sub" aria-label="Linee" id="lines"></nav>
     <div class="sizes"><div class="head"><span class="lbl">La tua taglia (EU)</span><button class="link" id="clr" hidden>Togli filtro</button></div><div class="iv-sz" id="sz" role="group" aria-label="Taglia"></div></div>
     <div class="count"><button class="ltt m-only" data-ldd id="ldd" aria-expanded="false" aria-controls="lddl"></button><span class="lbl" id="cnt"></span><button class="link" data-reset id="rst" hidden>Azzera</button></div>
@@ -258,7 +262,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 
 </div></main>
 
-<footer class="gut"><div class="in-w"><p>Questa pagina non usa cookie e non raccoglie dati personali. Le visite si contano solo in forma anonima.</p></div></footer>
+<footer class="gut"><div class="in-w"><p>Questa pagina non usa cookie. Le visite si contano solo in forma anonima.</p></div></footer>
 
 <button class="mbar gut m-only" data-filters><span>Filtra e ordina<b id="fN"></b></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
 <div class="msheet-s" id="fs" hidden><div class="msheet" role="dialog" aria-modal="true" aria-labelledby="fs-h"><div class="msheet-h"><b id="fs-h">Filtra e ordina</b><button class="btn sm ghost" data-fclose aria-label="Chiudi">✕</button></div><div class="msheet-b" id="fb"></div>
@@ -420,7 +424,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
     L = (data.paia || []).filter(p => p.taglie && p.taglie.length).map(p => ({ ...p, line: lineOf(p.nome) }));
     Z = [...new Set(L.flatMap(p => p.taglie.map(t => t.eu)))].sort((a, b) => a - b);
     L.forEach(p => p.taglie.forEach(t => { if (t.us) US[t.eu] = t.us; }));
-    if (data.aggiornato) $("upd").textContent = "Stock · aggiornato il " + new Date(data.aggiornato).toLocaleDateString("it-IT", { day: "numeric", month: "long" }) + " · " + L.reduce((a, p) => a + p.taglie.length, 0) + " taglie";
+    if (data.aggiornato) $("upd").textContent = "Kicks&Threads · Torino · stock aggiornato il " + new Date(data.aggiornato).toLocaleDateString("it-IT", { day: "numeric", month: "long" });
     draw();
     const h = location.hash.match(/^#p-(.+)$/); if (h) { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} const i = M.findIndex(p => p.slug === h[1]); if (i >= 0) qv(i); }
   }
