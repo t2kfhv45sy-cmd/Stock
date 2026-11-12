@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-05T11:42:23+01:00",
+ "aggiornato": "2026-11-12T21:45:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -34,18 +34,6 @@
     }
    ],
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Off-White-Alaska-Product.jpg?w=800&fm=jpg"
-  },
-  {
-   "nome": "Jordan 1 Low OG Travis Scott Medium Olive",
-   "slug": "jordan-1-low-travis-scott-medium-olive",
-   "taglie": [
-    {
-     "eu": "41",
-     "us": "8",
-     "cond": "9.5/10"
-    }
-   ],
-   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Medium-Olive-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Mocha",
@@ -153,23 +141,11 @@
    "taglie": [
     {
      "eu": "42.5",
-     "us": "10.5W",
+     "us": "9",
      "cond": "DS"
     }
    ],
    "foto": "https://images.stockx.com/images/Air-Jordan-4-Retro-Off-White-Sail-W-Product.jpg?w=800&fm=jpg"
-  },
-  {
-   "nome": "Nike Air Max 1 Patta Waves Aqua",
-   "slug": "nike-air-max-1-patta-waves-aqua",
-   "taglie": [
-    {
-     "eu": "42.5",
-     "us": "9",
-     "cond": "PADS"
-    }
-   ],
-   "foto": "https://images.stockx.com/images/Nike-Air-Max-1-Patta-Waves-Noise-Aqua-with-Bracelet-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Nike Air Max 1/97 Sean Wotherspoon",
