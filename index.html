@@ -219,7 +219,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 <main class="gut"><div class="in-w" style="display:grid;gap:28px">
   <section id="stock" style="display:grid;gap:18px;scroll-margin-top:80px">
     <div class="page-h"><div><span class="lbl" id="upd">Stock</span></div>
-      <div class="tools"><div class="seg" role="group" aria-label="Condizione" id="cond"></div><div class="seg" role="group" aria-label="Ordina" id="ord"></div><div class="seg" role="group" aria-label="Colonne" id="cols"></div></div></div>
+      <div class="tools"><div class="seg" role="group" aria-label="Condizione" id="cond"></div><div class="seg" role="group" aria-label="Ordina" id="ord"></div></div></div>
     <nav class="iv-sub" aria-label="Linee" id="lines"></nav>
     <div class="sizes"><div class="head"><span class="lbl">La tua taglia (EU)</span><button class="link" id="clr" hidden>Togli filtro</button></div><div class="iv-sz" id="sz" role="group" aria-label="Taglia"></div></div>
     <div class="count"><button class="ltt m-only" data-ldd id="ldd" aria-expanded="false" aria-controls="lddl"></button><span class="lbl" id="cnt"></span><button class="link" data-reset id="rst" hidden>Azzera</button></div>
@@ -301,11 +301,10 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
         <section><div class="fh"><span class="lbl">Filtra</span><button class="link2" data-reset>Azzera tutto</button></div><div class="fl">${fr("z")}${fr("c")}</div></section>`;
     $("ldd").innerHTML = `${esc(line === "Tutte" ? "Tutte le linee" : line)} ${lddOpen ? "▴" : "▾"}`;
     $("lddl").hidden = !lddOpen; $("ldd").setAttribute("aria-expanded", lddOpen); $("lddl").innerHTML = lines.map(l => `<button data-l="${esc(l)}" data-lddc aria-pressed="${l === line}">${esc(l === "Tutte" ? "Tutte le linee" : l)}</button>`).join("");
-    $("fgo").textContent = `Applica · ${M.length} ${M.length === 1 ? "modello" : "modelli"}`;
+    $("fgo").textContent = `Mostra ${M.length} ${M.length === 1 ? "modello" : "modelli"}`; // i filtri valgono subito: il bottone dice cosa vedrai
     if (!$("ms").hidden) search();
     seg("cond", [["all", "Tutte"], ["ds", "Nuove"], ["used", "Usate"]], cond, "c");
     seg("ord", [["line", "Linea"], ["name", "Nome"]], ord, "o");
-    seg("cols", [["4", "4"], ["6", "6"]], cols, "k");
     const n = M.reduce((a, p) => a + (size ? p.taglie.filter(t => t.eu === size).length : p.taglie.length), 0);
     $("cnt").textContent = `${M.length} ${M.length === 1 ? "modello" : "modelli"} · ${n} ${n === 1 ? "taglia" : "taglie"}${size ? " · EU " + size : ""}`;
     $("grid").style.setProperty("--cols", cols);
@@ -313,7 +312,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
       const tag = p.taglie.every(t => t.arrivo) ? '<span class="pill acc">In arrivo</span>' : p.lotto === 1 ? '<span class="pill acc">Ultimo paio</span>' : "";
       return `<button class="tile" data-i="${i}" aria-label="Vista rapida: ${esc(p.nome)}"><span class="ph" style="${bg(p)}">${tag}<span class="btn sm sec qv" aria-hidden="true">Vista rapida</span></span>
         <span class="ft"><b>${esc(p.nome)}</b><span class="lbl">EU ${tz.map(z => z === size ? `<b>${esc(z)}</b>` : esc(z)).join(", ")} · ${esc(cs)}</span></span></button>`; }).join("")
-      || `<div class="none"><b>La EU ${esc(size)} adesso non c'è${line !== "Tutte" ? " in " + esc(line) : ""}.</b><p class="sub" style="margin:0">Te la cerco io con il Source service: scrivimi modello e taglia.</p><a class="btn" data-dm="miss" href="${IG}" target="_blank" rel="noopener">Cercamela su Instagram</a></div>`;
+      || `<div class="none"><b>La EU ${esc(size)} adesso non c'è${line !== "Tutte" ? " in " + esc(line) : ""}.</b><p class="sub" style="margin:0">Te la cerco io con il Source service: scrivimi modello e taglia.</p><a class="btn" data-dm="miss" href="${IG}" target="_blank" rel="noopener">Chiedimela su Instagram</a></div>`;
     $("t-want").innerHTML = '<option value="">Qualsiasi paio in pagina</option>' + L.map(p => `<option>${esc(p.nome)}</option>`).join("");
   }
 
@@ -375,7 +374,6 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
     else if (g("#clr")) { size = ""; draw(); }
     else if (g("[data-c]")) { cond = g("[data-c]").dataset.c; if (g("[data-fback]")) fv = ""; draw(); }
     else if (g("[data-o]")) { ord = g("[data-o]").dataset.o; draw(); }
-    else if (g("[data-k]")) { cols = +g("[data-k]").dataset.k; draw(); }
     else if (g(".tile[data-i]")) qv(+g(".tile").dataset.i);
     else if (g("[data-nav]")) qv(cur + +g("[data-nav]").dataset.nav);
     else if (g("[data-p]")) qv(cur, +g("[data-p]").dataset.p);
