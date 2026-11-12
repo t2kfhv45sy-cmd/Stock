@@ -3,146 +3,277 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Kicks&amp;Threads WTS</title>
-<meta name="description" content="Kicks&amp;Threads · sneakers disponibili ora: modelli e taglie. Scrivici per prezzi e foto.">
-<meta property="og:title" content="Kicks&amp;Threads · WTS">
-<meta property="og:description" content="Sneakers disponibili ora: modelli e taglie.">
-<meta property="og:image" content="img/logo.webp">
-<meta name="theme-color" content="#292929">
+<title>Kicks&amp;Threads Stock</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Kicks&amp;Threads · sneakers disponibili ora: modelli, taglie e condizioni. Prezzo e foto in DM su Instagram.">
+<meta property="og:title" content="Kicks&amp;Threads · Stock">
+<meta property="og:description" content="Sneakers disponibili ora a Torino o con spedizione. Prezzo e foto in DM.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<meta property="og:image" content="https://t2kfhv45sy-cmd.github.io/Stock/img/logo.webp">
+<meta name="theme-color" content="#f5efe4">
 <link rel="icon" href="img/logo.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Fredoka:wght@500;600;700&family=Libre+Baskerville:wght@700&display=swap">
-<style>*,*::before,*::after{box-sizing:border-box}html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
-/* Layout: brand header like the logo badge, then a shelf of cards styled like the stock stories (charcoal, beige, orange) */
-:root {
-  --bg: #292929;
-  --card: #1D1D1D;
-  --beige: #F0E0C9;
-  --brown: #5A3D2D;
-  --orange: #DD5120;
-  --muted: #B8A992;
-  --line: #3A3634;
-  --script: "Shrikhand", "Cooper Black", Georgia, serif;
-  --display: "Fredoka", "Arial Rounded MT Bold", system-ui, sans-serif;
-  --serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
-  color-scheme: dark;
-}
-body { background: var(--bg); color: var(--beige); font-family: var(--display); font-size: 15px; line-height: 1.45; }
-.wrap { max-width: 1280px; margin: 0 auto; padding-block: 28px 56px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+/* Pagina stock per i clienti: stessi token e componenti dell'Inventory di K&T Control Center (carta, Schibsted Grotesk, foto su bianco alla Kith). Nessun prezzo. */
+:root{
+  --slab:#242424;--slab-ink:#efdfc6;--slab-mut:#a89c8a;
+  --bg:#f5efe4;--card:#fffdf9;--ink:#1d1b18;--mut:#665f55;--line:#e3dac9;--sunk:#efe7d9;--photo:#ffffff;
+  --accent:#e0521a;--accent-ink:#fff;--accent-btn:#ce4b17;--accent-text:#a8390b;--soft:#fbe3d6;--good:#16793a;--good-soft:#dcefe1;
+  --f:"Schibsted Grotesk",system-ui,sans-serif;--r-ctl:6px;--r-tag:4px;--r-card:12px;--r-ph:2px;--h-ctl:40px;--h-sm:32px;--h-sz:52px}
+@media (pointer:coarse){:root{--h-ctl:48px;--h-sm:44px}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--slab:#0f0e0d;--bg:#171614;--card:#201e1b;--ink:#efe9de;--mut:#a59e90;--line:#34312c;--sunk:#1b1a17;
+  --accent:#ff7a3d;--accent-ink:#1a0b03;--accent-btn:#ff7a3d;--accent-text:#ff8f5a;--soft:#3b2014;--good:#64c784;--good-soft:#16301f}}
+:root[data-theme="dark"]{color-scheme:dark;--slab:#0f0e0d;--bg:#171614;--card:#201e1b;--ink:#efe9de;--mut:#a59e90;--line:#34312c;--sunk:#1b1a17;
+  --accent:#ff7a3d;--accent-ink:#1a0b03;--accent-btn:#ff7a3d;--accent-text:#ff8f5a;--soft:#3b2014;--good:#64c784;--good-soft:#16301f}
+*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.47 var(--f);letter-spacing:-.01em;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.in-w{max-width:1320px;margin:0 auto}
 
-header { display: grid; justify-items: center; text-align: center; gap: 10px; padding-bottom: 26px; margin-bottom: 26px;
-  border-bottom: 2px solid var(--line); }
-.wordmark { width: min(420px, 86vw); height: auto; display: block; }
-.logo { width: 132px; height: auto; display: block; }
-h1 { font-family: var(--script); font-weight: 400; font-size: clamp(40px, 9vw, 64px); line-height: 1.05; margin: 0;
-  color: var(--beige); -webkit-text-stroke: 7px var(--brown); paint-order: stroke fill;
-  text-shadow: 0 4px 0 var(--brown); letter-spacing: .01em; text-wrap: balance; }
-.tag { font-family: var(--serif); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0; }
-.meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; font-family: var(--serif); font-size: 12px;
-  letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
-.meta b { color: var(--orange); }
+/* testo e componenti (dall'app) */
+.h{font-weight:700;letter-spacing:-.035em;line-height:1.05;margin:0;text-wrap:balance}
+.h1{font-size:clamp(30px,4vw,40px)}.h2{font-size:clamp(22px,3vw,28px)}
+.lbl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:14px;margin:4px 0 0;max-width:62ch}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:var(--h-ctl);padding:0 16px;border-radius:var(--r-ctl);font-weight:600;font-size:14px;white-space:nowrap;background:var(--accent-btn);color:var(--accent-ink);transition:filter .15s}
+.btn:hover{filter:brightness(1.07)}.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.sec{background:var(--sunk);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 35%,transparent)}
+.btn.sm{height:var(--h-sm);padding:0 12px;font-size:13px}.btn.block{width:100%}.btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.seg{display:inline-flex;gap:2px;padding:2px;border-radius:calc(var(--r-ctl) + 2px);background:var(--sunk);box-shadow:inset 0 0 0 1px var(--line);max-width:100%;overflow-x:auto;scrollbar-width:none}
+.seg::-webkit-scrollbar{display:none}
+.seg button{all:unset;cursor:pointer;flex:none;white-space:nowrap;height:calc(var(--h-sm) - 4px);padding:0 12px;border-radius:var(--r-ctl);font-size:13px;font-weight:600;color:var(--mut);display:inline-flex;align-items:center}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 0 0 1px var(--line)}.seg button:focus-visible{outline:2px solid var(--accent)}
+.pill{display:inline-flex;align-items:center;height:22px;padding:0 7px;border-radius:var(--r-tag);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--sunk);color:var(--mut);white-space:nowrap}
+.pill.acc{background:var(--soft);color:var(--accent-text)}.pill.good{background:var(--good-soft);color:var(--good)}
+.ph{display:block;background:var(--photo) center/contain no-repeat;background-origin:content-box;padding:8%;border-radius:var(--r-ph);box-shadow:inset 0 0 0 1px var(--line)}
+.in{height:var(--h-ctl);width:100%;padding:0 12px;border-radius:var(--r-ctl);background:var(--card);border:1px solid color-mix(in srgb,var(--mut) 55%,var(--line));font-weight:500}
+select.in{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--mut) 50%),linear-gradient(-45deg,transparent 50%,var(--mut) 50%);background-position:calc(100% - 17px) 50%,calc(100% - 12px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:30px}
 
-.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-@media (min-width: 640px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 900px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
-@media (min-width: 1150px) { .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-.card { background: var(--card); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;
-  box-shadow: 0 0 0 1px var(--line); }
-.shot { aspect-ratio: 7 / 5; max-width: 100%; background: #FFFFFF; display: grid; place-items: center; }
-.shot img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
-.ph { display: grid; justify-items: center; gap: 8px; color: #9C8F7E; font-family: var(--serif); font-size: 11px;
-  text-transform: uppercase; letter-spacing: .12em; }
-.ph svg { width: 64px; height: auto; }
-.info { padding: 10px 12px 12px; display: grid; gap: 10px; flex: 1; align-content: space-between; }
-.name { font-family: var(--display); font-weight: 700; font-size: 15px; line-height: 1.2; margin: 0; text-wrap: balance; color: var(--beige); }
-.sizes { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
-.size { font-family: var(--serif); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .02em;
-  color: var(--beige); border: 1.5px solid var(--orange); border-radius: 999px; padding: 3px 8px; white-space: nowrap;
-  font-variant-numeric: tabular-nums; }
-.size span { color: var(--muted); font-weight: 400; }
+/* striscia, testata */
+.bar{background:var(--slab);color:var(--slab-ink);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding-block:9px;padding-top:calc(9px + env(safe-area-inset-top,0px))}
+.bar .in-w{display:flex;justify-content:center;gap:8px 22px;flex-wrap:wrap;text-align:center}.bar span{color:var(--slab-mut)}.bar b{font-weight:600}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-block:10px}
+.top .in-w{display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:700;letter-spacing:-.03em;font-size:18px;margin-right:auto}
+.brand img{width:40px;height:auto;border-radius:6px}
+.nav{display:flex;gap:18px}.nav a{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);text-decoration:none}.nav a:hover{color:var(--ink)}
+@media (max-width:760px){.nav,#cols{display:none}.bar .in-w{font-size:11px;letter-spacing:.04em}.bar span,.bar b:nth-of-type(3){display:none}}
 
-.shot { position: relative; }
-.badge { position: absolute; top: 8px; left: 8px; background: var(--orange); color: #FFF; font-family: var(--display); font-weight: 700;
-  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 4px 8px; line-height: 1; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
-.size b { font-weight: 700; color: var(--orange); }
-.empty { padding: 40px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 14px; grid-column: 1 / -1; }
-footer { margin-top: 34px; text-align: center; font-family: var(--serif); font-size: 11px; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--muted); }
-:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+main{display:grid;gap:28px;padding-block:28px 40px}
+.page-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.iv-sub{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.iv-sub button{all:unset;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);padding:4px 0;border-bottom:2px solid transparent}
+.iv-sub button[aria-pressed="true"]{color:var(--ink);border-color:var(--accent)}.iv-sub button:focus-visible{outline:2px solid var(--accent)}
+.iv-sub sup{font-size:9px;margin-left:3px;letter-spacing:0}
+
+/* filtro taglie: le stesse caselle della Vista rapida */
+.sizes{display:grid;gap:8px}
+.sizes .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.iv-sz{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}
+.iv-sz button{all:unset;box-sizing:border-box;cursor:pointer;height:var(--h-sz);border:1px solid var(--line);border-radius:var(--r-ctl);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:600;font-size:14px;background:var(--card);line-height:1.15}
+.iv-sz button small{font-size:10.5px;font-weight:500;color:var(--mut)}
+.iv-sz button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.iv-sz button:focus-visible{outline:2px solid var(--accent)}
+.iv-sz button.off{color:var(--mut);background:var(--sunk);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--mut) 60%,transparent)}
+.link{all:unset;cursor:pointer;font-size:13px;font-weight:600;color:var(--accent-text);text-decoration:underline;text-underline-offset:3px}
+
+/* griglia alla Kith */
+.count{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.iv-grid{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:28px 12px}
+@media (max-width:760px){.iv-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 10px}}
+.tile{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-width:0;position:relative}
+.tile .ph{aspect-ratio:1/1;max-width:100%;padding:10%;position:relative;transition:background-size .3s cubic-bezier(.16,1,.3,1)}
+.tile:hover .ph{background-size:88%}
+.tile .ph .pill{position:absolute;right:8px;top:8px}
+.tile .qv{position:absolute;right:8px;bottom:8px;opacity:0;transition:opacity .15s}
+.tile:hover .qv,.tile:focus-visible .qv{opacity:1}
+@media (hover:none){.tile .qv{display:none}}
+.tile .ft{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:0 2px}
+.tile .ft b{font-weight:600;font-size:14px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile .ft .v{font-weight:600;font-size:13px;color:var(--mut);white-space:nowrap}
+.tile .ft .lbl{grid-column:1/-1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.none{grid-column:1/-1;background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:28px;display:grid;gap:10px;justify-items:center;text-align:center}
+
+/* source, trade, come funziona, domande */
+.band{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel p{margin:0;color:var(--mut)}
+.f2{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:8px}
+.fl{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--mut);font-weight:500}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:s}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--ink);padding-top:12px;display:grid;gap:4px}
+.step::before{counter-increment:s;content:"0" counter(s);font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--accent-text)}
+.step b{font-size:16px}.step span{color:var(--mut);font-size:14px}
+
+footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-area-inset-bottom,0px));color:var(--mut);font-size:12px;text-align:center}footer p{margin:0}
+
+/* barra in basso (telefono) */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:25;padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.dock .in-w{display:flex;gap:8px}.dock .btn{flex:1}
+@media (min-width:761px){.dock{display:none}footer{padding-bottom:20px}}
+
+/* vista rapida (come l'app) */
+.iv-scrim{position:fixed;inset:0;z-index:40;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;padding:16px}
+.iv-qv{background:var(--card);border-radius:var(--r-card);width:min(980px,100%);max-height:calc(100vh - 32px);overflow:auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.iv-qv>.ph{aspect-ratio:auto;min-height:min(62vh,520px);max-width:100%;padding:10%;border-radius:var(--r-card) 0 0 var(--r-card);position:relative;box-shadow:none}
+.iv-nav{all:unset;box-sizing:border-box;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.iv-nav svg{width:16px;height:16px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.iv-nav.l{left:12px}.iv-nav.l svg{transform:rotate(180deg)}.iv-nav.r{right:12px}
+.iv-in{padding:24px;display:flex;flex-direction:column;gap:14px;position:relative}
+.iv-in h2{margin:0;font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.1;padding-right:44px}
+.iv-in .x{position:absolute;right:12px;top:12px;width:var(--h-sm);padding:0}
+.iv-in .row{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}.acts .btn:first-child{grid-column:1/-1}
+@media (max-width:760px){.iv-scrim{place-items:end center;padding:0}.iv-qv{grid-template-columns:1fr;border-radius:var(--r-card) var(--r-card) 0 0;max-height:94vh}.iv-qv>.ph{aspect-ratio:4/3;min-height:0;border-radius:var(--r-card) var(--r-card) 0 0;padding:8%}.iv-in{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;background:var(--slab);color:var(--slab-ink);padding:10px 14px;border-radius:var(--r-ctl);font-size:13.5px;max-width:calc(100% - 32px);box-shadow:0 6px 24px rgba(0,0,0,.2)}
 </style>
-
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <img class="logo" src="img/logo.webp" alt="Logo Kicks&amp;Threads">
-    <img class="wordmark" src="img/wordmark.png" alt="Kicks&amp;Threads" onerror="this.hidden=true;document.getElementById('wm').hidden=false">
-    <h1 id="wm" hidden>Kicks&amp;Threads</h1>
-    <p class="tag">WTS · Stock</p>
-    <div class="meta">
-      <span><b id="count">–</b> modelli</span>
-      <span><b id="pairs">–</b> paia</span>
-      <span id="updated"></span>
-    </div>
-  </header>
+<div class="bar gut"><div class="in-w"><b>Meet a Torino e dintorni</b><span>·</span><b>Spedizione in tutta Italia</b><span>·</span><b>Prezzo e foto delle condizioni in DM</b></div></div>
+<header class="top gut"><div class="in-w">
+  <a class="brand" href="#stock"><img src="img/logo.webp" alt="">Kicks&amp;Threads</a>
+  <nav class="nav" aria-label="Sezioni"><a href="#stock">Stock</a><a href="#source">Source</a><a href="#trade">Trade</a><a href="#come">Come funziona</a></nav>
+  <a class="btn sm" data-dm="hi" href="https://ig.me/m/kicks_and_threads" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>Scrivimi</a>
+</div></header>
 
-  <main class="grid" id="grid" aria-live="polite"></main>
-  <footer>Kicks&amp;Threads.resell</footer>
-</div>
+<main class="gut"><div class="in-w" style="display:grid;gap:28px">
+  <section id="stock" style="display:grid;gap:18px;scroll-margin-top:80px">
+    <div class="page-h"><div><span class="lbl" id="upd">Stock</span><h1 class="h h1">Disponibili ora</h1><p class="sub">Tutte le paia che ho in mano adesso, con taglia e condizione. Tocca un modello per vederlo da vicino e chiedermi prezzo e foto su Instagram.</p></div>
+      <div class="tools"><div class="seg" role="group" aria-label="Condizione" id="cond"></div><div class="seg" role="group" aria-label="Ordina" id="ord"></div><div class="seg" role="group" aria-label="Colonne" id="cols"></div></div></div>
+    <nav class="iv-sub" aria-label="Linee" id="lines"></nav>
+    <div class="sizes"><div class="head"><span class="lbl">La tua taglia (EU)</span><button class="link" id="clr" hidden>Togli filtro</button></div><div class="iv-sz" id="sz" role="group" aria-label="Taglia"></div></div>
+    <div class="count"><span class="lbl" id="cnt"></span></div>
+    <div class="iv-grid" id="grid" aria-live="polite"></div>
+  </section>
+
+  <section class="band">
+    <div class="panel" id="source" style="scroll-margin-top:80px"><span class="lbl">Source service</span><h2 class="h h2">Non trovi il tuo paio?</h2>
+      <p>Dimmi modello e taglia: lo cerco io tra i miei contatti e ti scrivo appena lo trovo.</p>
+      <div class="f2"><label class="fl">Modello<input class="in" id="s-m" placeholder="es. Jordan 4 Bred Reimagined"></label><label class="fl">Taglia EU<input class="in" id="s-z" inputmode="decimal" placeholder="43"></label></div>
+      <a class="btn block" data-dm="src" href="https://ig.me/m/kicks_and_threads" target="_blank" rel="noopener">Chiedilo su Instagram</a></div>
+    <div class="panel" id="trade" style="scroll-margin-top:80px"><span class="lbl">Trade</span><h2 class="h h2">Hai un paio da scambiare?</h2>
+      <p>Valuto trade con le paia in pagina. Scegli quella che ti interessa e dimmi cosa offri.</p>
+      <label class="fl">Ti interessa<select class="in" id="t-want"></select></label>
+      <div class="f2"><label class="fl">Cosa offri<input class="in" id="t-m" placeholder="Modello e condizione"></label><label class="fl">Taglia EU<input class="in" id="t-z" inputmode="decimal" placeholder="44"></label></div>
+      <a class="btn block sec" data-dm="trade" href="https://ig.me/m/kicks_and_threads" target="_blank" rel="noopener">Proponi il trade</a></div>
+  </section>
+
+  <section id="come" style="display:grid;gap:16px;scroll-margin-top:80px"><span class="lbl">Come funziona</span>
+    <div class="steps"><div class="step"><b>Scegli modello e taglia</b><span>Filtra per la tua taglia e apri la scheda del paio.</span></div>
+      <div class="step"><b>Scrivimi su Instagram</b><span>Il messaggio con modello e taglia è già pronto: incollalo e invia.</span></div>
+      <div class="step"><b>Prezzo e foto in DM</b><span>Ti mando prezzo e foto reali delle condizioni.</span></div>
+      <div class="step"><b>Meet o spedizione</b><span>Ci vediamo a Torino o dintorni, oppure spedisco.</span></div></div>
+  </section>
+
+</div></main>
+
+<footer class="gut"><div class="in-w"><p>Questa pagina non usa cookie e non raccoglie dati personali. Le visite si contano solo in forma anonima.</p></div></footer>
+
+<div class="dock gut"><div class="in-w"><a class="btn" data-dm="hi" href="https://ig.me/m/kicks_and_threads" target="_blank" rel="noopener">Scrivimi su Instagram</a><a class="btn sec" href="#source">Source</a></div></div>
+<div class="iv-scrim" id="scrim" hidden><div class="iv-qv" role="dialog" aria-modal="true" aria-labelledby="qv-h" id="qv"></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
 
 <script>
-const SNEAKER = '<svg viewBox="0 0 120 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 44 L8 22 Q10 14 20 16 L40 22 Q52 26 60 18 L70 10 Q76 6 80 12 L86 24 Q92 32 106 36 Q116 39 114 46 L112 48 L8 48 Z"/><path d="M6 48 L114 48"/><path d="M48 24 L54 34 M58 20 L64 31 M68 14 L73 27"/></svg>';
+(function () {
+  "use strict";
+  const IG = "https://ig.me/m/kicks_and_threads"; // Instagram non accetta testo precompilato: il messaggio si copia, poi il link apre la chat
+  const $ = id => document.getElementById(id), esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const CHEV = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>';
+  const LINES = [[/jordan 1 (retro )?high/i, "Jordan 1 High"], [/jordan 1 (retro )?low/i, "Jordan 1 Low"], [/jordan 3/i, "Jordan 3"], [/jordan 4/i, "Jordan 4"], [/dunk/i, "Dunk / SB Dunk"], [/air max/i, "Air Max"]];
+  const lineOf = n => (LINES.find(([r]) => r.test(n)) || [0, "Altro"])[1];
+  const used = c => !/^(DS|PADS)?$/i.test(String(c || "").trim());
+  let L = [], Z = [], US = {}, line = "Tutte", size = "", cond = "all", ord = "line", cols = 4, M = [], cur = -1, pick = -1, back = null;
+  const ver = d => encodeURIComponent(d || "");
+  // foto: prima la propria (img/<slug>.webp), poi StockX; l'anteprima passa window.IMG
+  const photo = p => (window.IMG && window.IMG[p.slug]) || `img/${p.slug}.webp?v=${ver(window.VER)}`;
+  const bg = p => `background-image:url('${photo(p)}')${p.foto ? `,url('${p.foto}')` : ""}`;
 
-// own photo first (img/<slug>.webp), then the official StockX photo, then a placeholder
-function fotoFallback(img){
-  const f = img.dataset.foto;
-  if (f) { img.removeAttribute('data-foto'); img.src = f; return; }
-  img.replaceWith(Object.assign(document.createElement('div'), { className: 'ph', innerHTML: SNEAKER + 'Foto in arrivo' }));
-}
+  function toast(m) { const t = $("toast"); t.textContent = m; t.hidden = false; clearTimeout(toast.k); toast.k = setTimeout(() => t.hidden = true, 3400); }
+  async function copy(msg, ok) { try { await navigator.clipboard.writeText(msg); toast(ok); } catch (e) { toast(msg); } }
+  const seg = (id, list, v, key) => { $(id).innerHTML = list.map(([x, l]) => `<button data-${key}="${x}" aria-pressed="${String(x) === String(v)}">${l}</button>`).join(""); };
 
-function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-
-let VER = ''; // changes with data.aggiornato, so replaced photos reload too
-const COND = c => c === 'DS' ? 'DS' : c === 'PADS' ? 'PADS' : c === 'VNDS' ? 'VNDS' : (c || '');
-function card(p){
-  const sizes = p.taglie.map(t => `<span class="size">EU ${esc(t.eu)}${t.us ? ' <span>/ US ' + esc(t.us) + '</span>' : ''}${t.cond ? ' · <b>' + esc(COND(t.cond)) + '</b>' : ''}</span>`).join('');
-  // badge only for a new model whose pairs are all still on the way
-  const tutteInArrivo = p.taglie.length && p.taglie.every(t => t.arrivo);
-  return `<article class="card">
-    <div class="shot">
-      <img src="img/${esc(p.slug)}.webp?v=${VER}" alt="${esc(p.nome)}" loading="lazy" referrerpolicy="no-referrer"${p.foto ? ` data-foto="${esc(p.foto)}"` : ''} onerror="fotoFallback(this)">
-      ${tutteInArrivo ? '<span class="badge">In arrivo</span>' : ''}
-    </div>
-    <div class="info">
-      <h2 class="name">${esc(p.nome)}</h2>
-      <div class="sizes">${sizes}</div>
-    </div>
-  </article>`;
-}
-
-async function load(){
-  const grid = document.getElementById('grid');
-  try {
-    // ?t= bypasses GitHub Pages' CDN cache (~10 min), which no-store alone doesn't
-    const res = await fetch('stock.json?t=' + Date.now(), { cache: 'no-store' });
-    const data = await res.json();
-    VER = encodeURIComponent(data.aggiornato || '');
-    const list = (data.paia || []).filter(p => p.taglie && p.taglie.length);
-    document.getElementById('count').textContent = list.length;
-    document.getElementById('pairs').textContent = list.reduce((n, p) => n + p.taglie.length, 0);
-    if (data.aggiornato) {
-      const d = new Date(data.aggiornato);
-      document.getElementById('updated').textContent = 'Aggiornato il ' + d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long' });
-    }
-    grid.innerHTML = list.length ? list.map(card).join('') : '<div class="empty">Nessun paio disponibile in questo momento. Ricontrolla presto.</div>';
-  } catch (e) {
-    grid.innerHTML = '<div class="empty">Non riesco a caricare la lista. Ricarica la pagina tra qualche secondo.</div>';
+  function draw() {
+    const lines = ["Tutte", ...new Set(L.map(p => p.line))].sort((a, b) => a === "Tutte" ? -1 : b === "Tutte" ? 1 : a.localeCompare(b));
+    const base = L.filter(p => line === "Tutte" || p.line === line).map(p => ({ ...p, taglie: p.taglie.filter(t => cond === "all" || (cond === "used") === used(t.cond)) })).filter(p => p.taglie.length);
+    M = base.filter(p => !size || p.taglie.some(t => t.eu === size));
+    M.sort(ord === "name" ? (a, b) => a.nome.localeCompare(b.nome) : ord === "sizes" ? (a, b) => b.taglie.length - a.taglie.length : (a, b) => a.line.localeCompare(b.line) || a.nome.localeCompare(b.nome));
+    const avail = new Set(base.flatMap(p => p.taglie.map(t => t.eu)));
+    $("lines").innerHTML = lines.map(l => `<button data-l="${esc(l)}" aria-pressed="${l === line}">${esc(l)}<sup>${l === "Tutte" ? L.length : L.filter(p => p.line === l).length}</sup></button>`).join("");
+    $("sz").innerHTML = Z.map(z => `<button data-z="${z}" aria-pressed="${z === size}" class="${avail.has(z) ? "" : "off"}" aria-label="EU ${z}${avail.has(z) ? "" : ", non disponibile"}">${z}<small>US ${esc(US[z] || "–")}</small></button>`).join("");
+    $("clr").hidden = !size;
+    seg("cond", [["all", "Tutte"], ["ds", "Nuove"], ["used", "Usate"]], cond, "c");
+    seg("ord", [["line", "Linea"], ["name", "Nome"], ["sizes", "Più taglie"]], ord, "o");
+    seg("cols", [["4", "4"], ["6", "6"]], cols, "k");
+    const n = M.reduce((a, p) => a + (size ? p.taglie.filter(t => t.eu === size).length : p.taglie.length), 0);
+    $("cnt").textContent = `${M.length} ${M.length === 1 ? "modello" : "modelli"} · ${n} ${n === 1 ? "taglia" : "taglie"}${size ? " in EU " + size : ""}`;
+    $("grid").style.setProperty("--cols", cols);
+    $("grid").innerHTML = M.map((p, i) => { const tz = p.taglie.map(t => t.eu), cs = [...new Set(p.taglie.map(t => t.cond))].join(", ");
+      const tag = p.taglie.every(t => t.arrivo) ? '<span class="pill acc">In arrivo</span>' : p.taglie.length === 1 ? '<span class="pill">Ultimo paio</span>' : "";
+      return `<button class="tile" data-i="${i}" aria-label="Vista rapida: ${esc(p.nome)}"><span class="ph" style="${bg(p)}">${tag}<span class="btn sm sec qv" aria-hidden="true">Vista rapida</span></span>
+        <span class="ft"><b>${esc(p.nome)}</b><span class="lbl">EU ${esc(tz.join(", "))} · ${esc(cs)}</span></span></button>`; }).join("")
+      || `<div class="none"><b>La EU ${esc(size)} adesso non c'è${line !== "Tutte" ? " in " + esc(line) : ""}.</b><p class="sub" style="margin:0">Te la cerco io con il Source service: scrivimi modello e taglia.</p><a class="btn" data-dm="miss" href="${IG}" target="_blank" rel="noopener">Cercamela su Instagram</a></div>`;
+    $("t-want").innerHTML = '<option value="">Qualsiasi paio in pagina</option>' + L.map(p => `<option>${esc(p.nome)}</option>`).join("");
   }
-}
-load();
+
+  function qv(i, j) {
+    cur = (i + M.length) % M.length; const p = M[cur];
+    pick = j ?? (p.taglie.length === 1 ? 0 : p.taglie.findIndex(t => t.eu === size)); const t = p.taglie[pick];
+    $("qv").innerHTML = `<div class="ph" style="${bg(p)}" role="img" aria-label="${esc(p.nome)}">${M.length > 1 ? `<button class="iv-nav l" data-nav="-1" aria-label="Modello precedente">${CHEV}</button><button class="iv-nav r" data-nav="1" aria-label="Modello successivo">${CHEV}</button>` : ""}</div>
+      <div class="iv-in"><button class="btn sm ghost x" data-x aria-label="Chiudi">✕</button><span class="lbl">${esc(p.line)}</span><h2 id="qv-h">${esc(p.nome)}</h2>
+        <div class="row"><span class="lbl">Taglia${t ? " · condizione " + esc(t.cond) : ""}</span><div class="iv-sz">${p.taglie.map((x, k) => `<button data-p="${k}" aria-pressed="${k === pick}">${esc(x.eu)}<small>${esc(x.cond)}${x.arrivo ? " · in arrivo" : ""}</small></button>`).join("")}</div></div>
+        <div class="acts"><a class="btn" data-dm="pair" href="${IG}" target="_blank" rel="noopener" aria-disabled="${!t}">${t ? "Scrivimi per questo paio" : "Scegli una taglia"}</a>
+          <button class="btn sec" data-copy ${t ? "" : "disabled"}>Copia messaggio</button><button class="btn sec" data-share>Condividi</button></div></div>`;
+    const s = $("scrim"); if (s.hidden) { back = document.activeElement; s.hidden = false; document.body.style.overflow = "hidden"; }
+    try { history.replaceState(null, "", "#p-" + p.slug); } catch (e) {}
+    ($("qv").querySelector("[data-p][aria-pressed='true']") || $("qv").querySelector("[data-x]")).focus();
+  }
+  function close() { $("scrim").hidden = true; document.body.style.overflow = ""; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} if (back && back.isConnected) back.focus(); }
+
+  const MSG = {
+    hi: () => "Ciao! Ho visto lo stock sulla tua pagina, vorrei qualche info.",
+    pair: () => { const p = M[cur], t = p.taglie[pick]; return `Ciao! Mi interessa ${p.nome}, taglia EU ${t.eu}${t.us ? " / US " + t.us : ""} (${t.cond}). Mi mandi prezzo e foto delle condizioni?`; },
+    src: () => `Ciao! Source service: cerco ${$("s-m").value.trim() || "[modello]"}, taglia EU ${$("s-z").value.trim() || "[taglia]"}.`,
+    miss: () => `Ciao! Source service: cerco la taglia EU ${size}. Modello: [scrivi il modello].`,
+    trade: () => `Ciao! Vorrei proporti un trade. Mi interessa: ${$("t-want").value || "un paio della tua pagina"}. Offro: ${$("t-m").value.trim() || "[modello e condizione]"}, taglia EU ${$("t-z").value.trim() || "[taglia]"}. Ti mando le foto in DM.`
+  };
+  document.addEventListener("click", e => {
+    const t = e.target, g = s => t.closest(s);
+    if (g("[data-dm]")) { const d = g("[data-dm]"); if (d.getAttribute("aria-disabled") === "true") { e.preventDefault(); return; } copy(MSG[d.dataset.dm](), "Messaggio copiato: incollalo nella chat Instagram"); }
+    else if (g("[data-l]")) { line = g("[data-l]").dataset.l; draw(); }
+    else if (g("#sz [data-z]")) { const z = g("[data-z]").dataset.z; size = z === size ? "" : z; draw(); }
+    else if (g("#clr")) { size = ""; draw(); }
+    else if (g("[data-c]")) { cond = g("[data-c]").dataset.c; draw(); }
+    else if (g("[data-o]")) { ord = g("[data-o]").dataset.o; draw(); }
+    else if (g("[data-k]")) { cols = +g("[data-k]").dataset.k; draw(); }
+    else if (g(".tile[data-i]")) qv(+g(".tile").dataset.i);
+    else if (g("[data-nav]")) qv(cur + +g("[data-nav]").dataset.nav);
+    else if (g("[data-p]")) qv(cur, +g("[data-p]").dataset.p);
+    else if (g("[data-copy]")) copy(MSG.pair(), "Messaggio copiato");
+    else if (g("[data-share]")) copy(location.href.split("#")[0] + "#p-" + M[cur].slug, "Link del paio copiato");
+    else if (g("[data-x]") || t.id === "scrim") close();
+  });
+  document.addEventListener("keydown", e => { if ($("scrim").hidden) return; if (e.key === "Escape") close(); else if (e.key === "ArrowRight") qv(cur + 1); else if (e.key === "ArrowLeft") qv(cur - 1); });
+
+  function start(data) {
+    window.VER = data.aggiornato;
+    L = (data.paia || []).filter(p => p.taglie && p.taglie.length).map(p => ({ ...p, line: lineOf(p.nome) }));
+    Z = [...new Set(L.flatMap(p => p.taglie.map(t => t.eu)))].sort((a, b) => a - b);
+    L.forEach(p => p.taglie.forEach(t => { if (t.us) US[t.eu] = t.us; }));
+    if (data.aggiornato) $("upd").textContent = "Stock · aggiornato il " + new Date(data.aggiornato).toLocaleDateString("it-IT", { day: "numeric", month: "long" }) + " · " + L.reduce((a, p) => a + p.taglie.length, 0) + " taglie";
+    draw();
+    const h = location.hash.match(/^#p-(.+)$/); if (h) { const i = M.findIndex(p => p.slug === h[1]); if (i >= 0) qv(i); }
+  }
+  if (window.STOCK) start(window.STOCK);
+  else fetch("stock.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.json()).then(start) // ?t= salta la cache di GitHub Pages
+    .catch(() => { $("grid").innerHTML = '<div class="none"><b>Non riesco a caricare lo stock.</b><p class="sub" style="margin:0">Ricarica la pagina tra qualche secondo.</p></div>'; });
+})();
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35e983d73639495bb39932077483a879"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
