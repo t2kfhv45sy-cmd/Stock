@@ -30,7 +30,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.47 var(--f);lett
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.gut{padding-left:max(clamp(16px,4vw,56px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,56px),env(safe-area-inset-right,0px))}
 .in-w{max-width:1320px;margin:0 auto}
 
 /* testo e componenti (dall'app) */
@@ -78,7 +78,7 @@ main{display:grid;gap:28px;padding-block:28px 40px}
 .sizes .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .iv-sz{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}
 .iv-sz button{all:unset;box-sizing:border-box;cursor:pointer;height:var(--h-sz);border:1px solid var(--line);border-radius:var(--r-ctl);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:600;font-size:14px;background:var(--card);line-height:1.15}
-.iv-sz button small{font-size:10.5px;font-weight:500;color:var(--mut)}
+.iv-sz button small{font-size:11px;font-weight:500;color:var(--mut)}
 .iv-sz button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.iv-sz button:focus-visible{outline:2px solid var(--accent)}
 .iv-sz button.off{color:var(--mut);background:var(--sunk);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--mut) 60%,transparent)}
 .link{all:unset;cursor:pointer;font-size:13px;font-weight:600;color:var(--accent-text);text-decoration:underline;text-underline-offset:3px}
@@ -204,6 +204,16 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ico .t-d{display:none}:root:not([data-theme="light"]) .ico .t-l{display:block}}
 .in::placeholder{color:var(--mut);opacity:1}
 .hint{margin:0;font-size:12.5px;color:var(--mut)}
+
+/* conferma prima di aprire Instagram */
+.dmc{position:fixed;inset:0;z-index:60;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;padding:16px}
+.dm-box{background:var(--bg);border-radius:var(--r-card);width:min(440px,100%);padding:22px;display:grid;gap:14px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.dm-h{display:flex;align-items:center;gap:10px}.dm-h h2{margin:0;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.dm-ok{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--good-soft);color:var(--good);font-weight:700}
+.dm-t{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r-ctl);padding:12px 14px;font-size:14px;user-select:all}
+.dm-s{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14px;color:var(--mut)}.dm-s b{color:var(--ink)}
+.dm-f{display:flex;gap:8px}.dm-f .btn{flex:1}
+@media (max-width:760px){.dmc{place-items:end center;padding:0}.dm-box{border-radius:var(--r-card) var(--r-card) 0 0;padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body>
@@ -256,6 +266,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
 <div class="msrch" id="ms" hidden role="dialog" aria-modal="true" aria-label="Cerca"><div class="msrch-h"><label class="msrch-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg><input id="sq" type="search" placeholder="Cerca modello, colorway o taglia" autocomplete="off" aria-label="Cerca"></label><button class="link" data-sclose>Chiudi</button></div>
   <div class="mtabs" id="stabs" role="group" aria-label="Condizione"></div><div class="msrch-b" id="sb"></div></div>
 <div class="iv-scrim" id="scrim" hidden><div class="iv-qv" role="dialog" aria-modal="true" aria-labelledby="qv-h" id="qv"></div></div>
+<div class="dmc" id="dmc" hidden><div class="dm-box" role="dialog" aria-modal="true" aria-labelledby="dm-h" id="dmb"></div></div>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
@@ -326,11 +337,23 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
         || `<p class="sub">Nessun paio per «${esc(sq)}». <a class="link" data-dm="src" href="${IG}" target="_blank" rel="noopener">Chiedimelo con il Source</a></p>`)
       : `<div class="mlist"><button class="mrow" data-sl="Tutte"><span>Tutto lo stock<small>${L.length}</small></span>${CHEV}</button>${lines.map(l => `<button class="mrow" data-sl="${esc(l)}"><span>${esc(l)}<small>${L.filter(p => p.line === l && p.taglie.some(ok)).length}</small></span>${CHEV}</button>`).join("")}</div>`;
   }
-  const ovOpen = () => !$("scrim").hidden || !$("ms").hidden || !$("fs").hidden;
+  async function dmConfirm(msg) {
+    let ok = true; try { await navigator.clipboard.writeText(msg); } catch (e) { ok = false; }
+    $("dmb").innerHTML = `<div class="dm-h"><span class="dm-ok" aria-hidden="true">${ok ? "✓" : "!"}</span><h2 id="dm-h">${ok ? "Messaggio copiato" : "Copia il messaggio"}</h2></div>
+      <p class="dm-t" id="dm-t">${esc(msg)}</p>
+      <ol class="dm-s"><li>Apri la chat Instagram</li><li>${matchMedia("(pointer: fine)").matches ? "Incolla con <b>Ctrl+V</b> (<b>⌘V</b> su Mac)" : "Tieni premuto nel campo e scegli <b>Incolla</b>"}</li><li>Invia</li></ol>
+      <a class="btn block" data-dmgo href="${IG}" target="_blank" rel="noopener">Apri Instagram</a>
+      <div class="dm-f">${ok ? "" : '<button class="btn sec" data-dmcopy>Copia</button>'}<button class="btn sec" data-dmx>Annulla</button></div>`;
+    const s = $("dmc"); if (s.hidden) { dmBack = document.activeElement; s.hidden = false; document.body.style.overflow = "hidden"; ovPush(); }
+    $("dmb").querySelector("[data-dmgo]").focus();
+  }
+  let dmBack = null;
+  function dmClose() { $("dmc").hidden = true; if (!ovOpen()) { document.body.style.overflow = ""; ovPop(); } else document.body.style.overflow = "hidden"; if (dmBack && dmBack.isConnected) dmBack.focus(); }
+  const ovOpen = () => !$("scrim").hidden || !$("ms").hidden || !$("fs").hidden || !$("dmc").hidden;
   let pushed = false; // una sola voce in cronologia per tutti i pannelli aperti
   function ovPush(url) { try { if (!pushed) { history.pushState({ ov: 1 }, "", url || location.href); pushed = true; } else if (url) history.replaceState({ ov: 1 }, "", url); } catch (e) {} }
   function ovPop() { if (pushed) { pushed = false; try { history.back(); } catch (e) {} } }
-  window.addEventListener("popstate", () => { pushed = false; ["scrim", "ms", "fs"].forEach(id => $(id).hidden = true); document.body.style.overflow = ""; });
+  window.addEventListener("popstate", () => { pushed = false; ["scrim", "ms", "fs", "dmc"].forEach(id => $(id).hidden = true); document.body.style.overflow = ""; });
   const sheet = (id, on) => { $(id).hidden = !on; document.body.style.overflow = on ? "hidden" : ""; if (on) ovPush(); else if (!ovOpen()) ovPop(); };
 
   function qv(i, j) {
@@ -340,7 +363,7 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
       <div class="iv-in"><button class="btn sm ghost x" data-x aria-label="Chiudi">✕</button><span class="lbl">${esc(p.line)}</span><h2 id="qv-h">${esc(p.nome)}</h2>
         <div class="row"><span class="lbl">Taglia${t ? " · condizione " + esc(t.cond) : ""}</span><div class="iv-sz">${p.taglie.map((x, k) => `<button data-p="${k}" aria-pressed="${k === pick}">${esc(x.eu)}<small>${esc(x.cond)}${x.arrivo ? " · in arrivo" : ""}</small></button>`).join("")}</div></div>
         <div class="acts"><a class="btn" data-dm="pair" href="${IG}" target="_blank" rel="noopener" aria-disabled="${!t}">${t ? "Scrivimi per questo paio" : "Scegli una taglia"}</a>
-          <button class="btn sec" data-copy ${t ? "" : "disabled"}>Copia messaggio</button><button class="btn sec" data-share>Condividi</button><p class="hint">Copio il messaggio e apro Instagram: incollalo nella chat e invia.</p></div></div>`;
+          <button class="btn sec" data-copy ${t ? "" : "disabled"}>Copia messaggio</button><button class="btn sec" data-share>Condividi</button><p class="hint">Ti preparo il messaggio con modello e taglia da incollare su Instagram.</p></div></div>`;
     const s = $("scrim"); if (s.hidden) { back = document.activeElement; s.hidden = false; document.body.style.overflow = "hidden"; }
     ovPush(location.pathname + location.search + "#p-" + p.slug);
     ($("qv").querySelector("[data-p][aria-pressed='true']") || $("qv").querySelector("[data-x]")).focus();
@@ -356,7 +379,12 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
   };
   document.addEventListener("click", e => {
     const t = e.target, g = s => t.closest(s);
-    if (g("[data-dm]")) { const d = g("[data-dm]"); if (d.getAttribute("aria-disabled") === "true") { e.preventDefault(); return; } copy(MSG[d.dataset.dm](), "Messaggio copiato: incollalo nella chat Instagram"); }
+    if (g("[data-dm]")) { const d = g("[data-dm]"), need = { src: "s-m", trade: "t-m" }[d.dataset.dm]; e.preventDefault();
+      if (need && !$(need).value.trim()) { $(need).focus(); toast(d.dataset.dm === "src" ? "Scrivi il modello che cerchi" : "Scrivi cosa offri"); return; }
+      if (d.getAttribute("aria-disabled") !== "true") dmConfirm(MSG[d.dataset.dm]()); }
+    else if (g("[data-dmgo]")) { $("dmc").hidden = true; document.body.style.overflow = ""; if (!ovOpen()) ovPop(); }
+    else if (g("[data-dmx]") || t.id === "dmc") dmClose();
+    else if (g("[data-dmcopy]")) copy($("dm-t").textContent, "Messaggio copiato");
     else if (g("[data-fv]")) { fv = g("[data-fv]").dataset.fv; draw(); }
     else if (g("[data-ldd]")) { lddOpen = !lddOpen; draw(); }
     else if (g("[data-l]")) { line = g("[data-l]").dataset.l; if (g("[data-fback]")) fv = ""; if (g("[data-lddc]")) lddOpen = false; draw(); }
@@ -382,7 +410,10 @@ footer{border-top:1px solid var(--line);padding-block:20px calc(96px + env(safe-
     else if (g("[data-x]") || t.id === "scrim") close();
   });
   $("sq").addEventListener("input", e => { sq = e.target.value; search(); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("ms").hidden) return sheet("ms", false); if (e.key === "Escape" && !$("fs").hidden) return sheet("fs", false); if ($("scrim").hidden) return; if (e.key === "Escape") close(); else if (e.key === "ArrowRight") qv(cur + 1); else if (e.key === "ArrowLeft") qv(cur - 1); });
+  document.addEventListener("keydown", e => { if (e.key !== "Tab") return; const box = !$("dmc").hidden ? $("dmb") : !$("scrim").hidden ? $("qv") : null; if (!box) return;
+    const f = [...box.querySelectorAll("a[href],button:not([disabled]),input,[tabindex]:not([tabindex='-1'])")].filter(x => x.offsetParent !== null); if (!f.length) return;
+    const a = f[0], z = f[f.length - 1]; if (e.shiftKey && (document.activeElement === a || !box.contains(document.activeElement))) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && (document.activeElement === z || !box.contains(document.activeElement))) { e.preventDefault(); a.focus(); } });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("dmc").hidden) return dmClose(); if (e.key === "Escape" && !$("ms").hidden) return sheet("ms", false); if (e.key === "Escape" && !$("fs").hidden) return sheet("fs", false); if ($("scrim").hidden) return; if (e.key === "Escape") close(); else if (e.key === "ArrowRight") qv(cur + 1); else if (e.key === "ArrowLeft") qv(cur - 1); });
 
   function start(data) {
     window.VER = data.aggiornato;
