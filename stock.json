@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-12T21:45:00+01:00",
+ "aggiornato": "2026-11-15T10:40:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -86,6 +86,11 @@
      "cond": "DS"
     },
     {
+     "eu": "42.5",
+     "us": "9",
+     "cond": "DS"
+    },
+    {
      "eu": "44",
      "us": "10",
      "cond": "DS"
@@ -111,7 +116,7 @@
      "cond": "DS"
     }
    ],
-   "lotto": 11,
+   "lotto": 12,
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Sail-Tropical-Pink-Product.jpg?w=800&fm=jpg"
   },
   {
