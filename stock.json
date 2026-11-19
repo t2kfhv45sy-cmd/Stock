@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-15T10:40:00+01:00",
+ "aggiornato": "2026-11-19T15:45:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -37,6 +37,30 @@
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Off-White-Alaska-Product.jpg?w=800&fm=jpg"
   },
   {
+   "nome": "Jordan 1 Low OG Travis Scott Canary Yellow",
+   "slug": "jordan-1-low-travis-scott-canary-yellow",
+   "taglie": [
+    {
+     "eu": "40.5",
+     "us": "7.5",
+     "cond": "VNDS"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Canary-Womens-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Fragment",
+   "slug": "jordan-1-low-travis-scott-fragment",
+   "taglie": [
+    {
+     "eu": "44",
+     "us": "10",
+     "cond": "9.5/10"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Low-fragment-design-x-Travis-Scott-Product.jpg?w=800&fm=jpg"
+  },
+  {
    "nome": "Jordan 1 Low OG Travis Scott Mocha",
    "slug": "jordan-1-low-travis-scott-mocha",
    "taglie": [
@@ -47,6 +71,31 @@
     }
    ],
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-Travis-Scott-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Phantom",
+   "slug": "jordan-1-low-travis-scott-phantom",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "9.5",
+     "cond": "VNDS"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Black-Phantom-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Jordan 1 Low OG Travis Scott Reverse Mocha",
+   "slug": "jordan-1-low-travis-scott-reverse-mocha",
+   "taglie": [
+    {
+     "eu": "41",
+     "us": "8",
+     "cond": "9/10",
+     "arrivo": true
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Reverse-Mocha_V2-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Shy Pink",
@@ -120,18 +169,6 @@
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Sail-Tropical-Pink-Product.jpg?w=800&fm=jpg"
   },
   {
-   "nome": "Jordan 3 J Balvin Medellín",
-   "slug": "jordan-3-j-balvin-medellin",
-   "taglie": [
-    {
-     "eu": "43",
-     "us": "9.5",
-     "cond": "VNDS"
-    }
-   ],
-   "foto": "https://images.stockx.com/images/Air-Jordan-3-Retro-SP-J-Balvin-Product.jpg?w=800&fm=jpg"
-  },
-  {
    "nome": "Jordan 4 SB Pine Green",
    "slug": "jordan-4-sb-pine-green",
    "taglie": [
@@ -156,13 +193,37 @@
    "foto": "https://images.stockx.com/images/Air-Jordan-4-Retro-Off-White-Sail-W-Product.jpg?w=800&fm=jpg"
   },
   {
+   "nome": "Jumpman Jack Travis Scott Sail",
+   "slug": "jumpman-jack-travis-scott-sail",
+   "taglie": [
+    {
+     "eu": "42",
+     "us": "8.5",
+     "cond": "9.5/10"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-Cut-The-Check-TR-Travis-Scott-Sail-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Nike Air Force 1 Travis Scott Cactus Jack",
+   "slug": "nike-air-force-1-travis-scott-cactus-jack",
+   "taglie": [
+    {
+     "eu": "45.5",
+     "us": "11.5",
+     "cond": "PADS"
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Travis-Scott-Cactus-Jack-Product.jpg?w=800&fm=jpg"
+  },
+  {
    "nome": "Nike Air Max 1/97 Sean Wotherspoon",
    "slug": "nike-air-max-1-97-sean-wotherspoon",
    "taglie": [
     {
      "eu": "44.5",
      "us": "10.5",
-     "cond": "9+/10"
+     "cond": "9.5/10"
     }
    ],
    "foto": "https://images.stockx.com/images/Nike-Air-Max-1-97-Sean-Wotherspoon-Product.jpg?w=800&fm=jpg"
