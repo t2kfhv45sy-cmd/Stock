@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T15:57:00+01:00",
+ "aggiornato": "2026-11-20T16:05:00+01:00",
  "paia": [
   {
    "nome": "Jordan 1 High OG Union LA Black Toe",
@@ -35,6 +35,19 @@
    ],
    "lotto": 4,
    "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Off-White-Alaska-Product.jpg?w=800&fm=jpg"
+  },
+  {
+   "nome": "Jordan 1 Low OG Nigel Sylvester Nitro",
+   "slug": "jordan-1-low-nigel-sylvester-nitro",
+   "taglie": [
+    {
+     "eu": "43",
+     "us": "9.5",
+     "cond": "DS",
+     "arrivo": true
+    }
+   ],
+   "foto": "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-Nigel-Sylvester-Better-With-Time-Product.jpg?w=800&fm=jpg"
   },
   {
    "nome": "Jordan 1 Low OG Travis Scott Canary Yellow",
@@ -208,24 +221,19 @@
    "slug": "nike-air-force-1-travis-scott-cactus-jack",
    "taglie": [
     {
+     "eu": "45",
+     "us": "11",
+     "cond": "DS",
+     "arrivo": true
+    },
+    {
      "eu": "45.5",
      "us": "11.5",
      "cond": "PADS"
     }
    ],
-   "foto": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Travis-Scott-Cactus-Jack-Product.jpg?w=800&fm=jpg"
-  },
-  {
-   "nome": "Nike Air Max 1/97 Sean Wotherspoon",
-   "slug": "nike-air-max-1-97-sean-wotherspoon",
-   "taglie": [
-    {
-     "eu": "44.5",
-     "us": "10.5",
-     "cond": "9.5/10"
-    }
-   ],
-   "foto": "https://images.stockx.com/images/Nike-Air-Max-1-97-Sean-Wotherspoon-Product.jpg?w=800&fm=jpg"
+   "foto": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Travis-Scott-Cactus-Jack-Product.jpg?w=800&fm=jpg",
+   "lotto": 2
   },
   {
    "nome": "Nike Dunk SB Strangelove",
